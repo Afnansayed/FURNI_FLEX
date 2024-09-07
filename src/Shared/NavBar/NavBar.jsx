@@ -1,13 +1,13 @@
 import React from "react";
 import logo from "../../assets/images/icon.png";
 import { ImMenu2 } from "react-icons/im";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FaCartShopping } from "react-icons/fa6";
 const NavBar = () => {
   const navLink = (
     <>
       <NavLink to="/" 
-      className={({isActive}) => isActive ? "text-[#72bff9]  border-[#72bff9] border-b-2 px-4" : " px-2"}
+      className={({isActive}) => isActive ? "text-[#72bff9] mr-2  border-[#72bff9] border-b-2 px-4" : " px-2 mr-2"}
       ><li> Products</li></NavLink>
 
       <li>
@@ -51,9 +51,9 @@ const NavBar = () => {
           <span className="badge badge-sm indicator-item">8</span>
         </div>
         {
-            user ? 'comming' : <div className="px-4 md:px-6 bg-[#72bff9] text-white rounded-full py-2 font-semibold">
+            user ? 'comming' : <Link to="/signup" className="px-4 md:px-6 bg-[#72bff9] text-white rounded-full py-2 font-semibold">
             Log In
-          </div>
+          </Link>
         }  
         </div>
       </div>
