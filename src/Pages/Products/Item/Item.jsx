@@ -3,7 +3,7 @@ import { FaCartArrowDown } from 'react-icons/fa6';
 import { CartContext } from '../../../Providers/CartProvider/CartProvider';
 
 const Item = ({funnichair}) => {
-    const  {addToCart} = useContext(CartContext);
+    const  {addToCart , cartItems} = useContext(CartContext);
     const { _id,productName ,productPrice,description,image} = funnichair;
     const discountedPrice = productPrice - (productPrice * 30) / 100;
    
@@ -12,7 +12,7 @@ const Item = ({funnichair}) => {
     const handleAddToCart = () => {
         addToCart(_id)
     }
-    //console.log(user)
+    console.log(cartItems)
     return (
         <>
             <section className='bg-base-100 w-full  lg:w-72 mx-auto p-6 shadow-2xl mb-2 text-sm '>

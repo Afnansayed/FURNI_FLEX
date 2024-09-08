@@ -10,7 +10,7 @@ const Products = () => {
      const  {data: furnichairs = [], refetch} = useQuery({
         queryKey: ['furnichairs'],
         queryFn: async () => {
-            const res = await axios.get(`http://localhost:5000/furnichairs`);
+            const res = await axios.post(`http://localhost:5000/furnichairs`);
             return res.data;
         }
      })
